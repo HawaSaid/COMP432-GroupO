@@ -1,5 +1,5 @@
 # COMP432-Project
-<b>Members of Group O</b>
+#Members of Group O
 <u> Hawa-Afnane Said - 40263400</u>
 <u> Lesley Ventura - 40281652</u>
 <u> Marko Matijevic - 40282591</u>
