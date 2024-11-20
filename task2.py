@@ -22,7 +22,7 @@ else:
     print("\nUsing CPU.\n")
 
 # load pre-trained ImageNet encoder model
-imagenet_encoder = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)     ## try ResNet-34 and ResNet-101, or a completely different encoder ##
+imagenet_encoder = models.resnet101(weights=models.ResNet101_Weights.DEFAULT)     ## try ResNet-34 and ResNet-101, or a completely different encoder ##
 imagenet_encoder = torch.nn.Sequential(*list(imagenet_encoder.children())[:-1])
 imagenet_encoder.to(device)
 
