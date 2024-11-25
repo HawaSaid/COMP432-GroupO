@@ -127,18 +127,16 @@ clf_rf_ds2.fit(features_imagenet_ds2, labels_ds2)
 predictions_rf_ds2 = clf_rf_ds2.predict(features_imagenet_ds2)
 print("Classification Report for Dataset 2:")
 print(classification_report(labels_ds2, predictions_rf_ds2))
-
 accuracy_rf_ds2 = clf_rf_ds2.score(features_imagenet_ds2, labels_ds2) * 100
 print(f"Random Forest classification accuracy on Dataset 2: {accuracy_rf_ds2:.2f}")
 
-
+# perform classification on Dataset 2 with Random Forest
 clf_rf_ds3 = RandomForestClassifier(n_estimators=100, random_state=42)
 clf_rf_ds3.fit(features_imagenet_ds3, labels_ds3)
 
 predictions_rf_ds3 = clf_rf_ds3.predict(features_imagenet_ds3)
 print("Classification Report for Dataset 3:")
 print(classification_report(labels_ds3, predictions_rf_ds3))
-
 accuracy_rf_ds3 = clf_rf_ds3.score(features_imagenet_ds3, labels_ds3) * 100
 print(f"Random Forest classification accuracy on Dataset 3: {accuracy_rf_ds3:.2f}")
 
