@@ -28,7 +28,7 @@ imagenet_encoder.to(device)
 
 # hyperparameters
 img_size = (224, 224)
-batch_size = 64     ## try different batch size ##
+batch_size = 128     ## try different batch size ##
 
 # image transformations
 transform = transforms.Compose([
@@ -124,11 +124,11 @@ visualize_tsne(features_imagenet_ds3, labels_ds3, "ImageNet Encoder on Dataset 3
 # perfrom classification on Dataset 2 with Random Forest
 clf_rf_ds2 = RandomForestClassifier(n_estimators=100, random_state=42)
 clf_rf_ds2.fit(features_imagenet_ds2, labels_ds2)
-accuracy_rf_ds2 = clf_rf_ds2.score(features_imagenet_ds2, labels_ds2)
-print(f"Random Forest classification accuracy on Dataset 2: {accuracy_rf_ds2}")
+accuracy_rf_ds2 = clf_rf_ds2.score(features_imagenet_ds2, labels_ds2) * 100
+print(f"Random Forest classification accuracy on Dataset 2: {accuracy_rf_ds2:.2f}")
 
 clf_rf_ds3 = RandomForestClassifier(n_estimators=100, random_state=42)
 clf_rf_ds3.fit(features_imagenet_ds3, labels_ds3)
-accuracy_rf_ds3 = clf_rf_ds3.score(features_imagenet_ds3, labels_ds3)
-print(f"Random Forest classification accuracy on Dataset 3: {accuracy_rf_ds3}")
+accuracy_rf_ds3 = clf_rf_ds3.score(features_imagenet_ds3, labels_ds3) * 100
+print(f"Random Forest classification accuracy on Dataset 3: {accuracy_rf_ds3:.2f}")
 
