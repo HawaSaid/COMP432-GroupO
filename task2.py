@@ -53,8 +53,6 @@ class CustomImageDataset(Dataset):
                     if img_name.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):    # fixes error about the image extension
                         self.image_paths.append(img_path)
                         self.labels.append(class_label)
-                    # self.image_paths.append(os.path.join(class_dir, img_name))
-                    # self.labels.append(class_label)
     
     def __len__(self):
         return len(self.image_paths)
