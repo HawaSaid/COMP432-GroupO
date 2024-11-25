@@ -16,14 +16,14 @@ elif torch.backends.mps.is_available():
     device = torch.device("mps")  # Use MPS for Apple Silicon GPUs
     print("\nUsing MPS (Apple Silicon GPU).\n")
 else:
-    device = torch.device("cpu")  # Fall back to CPU
+    device = torch.device("cpu")  # Fall back to CPU if neither are being used
     print("\nUsing CPU.\n")
 
 # Transformation for datasets
 transform = transforms.Compose([
-    transforms.Resize((224, 224)),
+    transforms.Resize((224, 224)), #Resize images to 224x224
     transforms.ToTensor(),
-    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]) # Normalize
 ])
 
 # Get the path of dataset2 and dataset3
@@ -37,7 +37,7 @@ dataset3 = datasets.ImageFolder(dataset3_path, transform=transform)
 dataloader2 = torch.utils.data.DataLoader(dataset2, batch_size=32, shuffle=False)
 dataloader3 = torch.utils.data.DataLoader(dataset3, batch_size=32, shuffle=False)
 
-# Loaded pretrained model from task1
+# Load pretrained model from task1
 class CustomResNet(nn.Module):
     def __init__(self, num_classes):
         super(CustomResNet, self).__init__()
@@ -61,7 +61,7 @@ class CustomResNet(nn.Module):
 model = CustomResNet(num_classes=3).to(device)
 model.load_state_dict(torch.load('my_model_task1_lr0.001_fulldataset.pth', map_location=device, weights_only=True))
 
-# Remove classification head (final layer) to use the feature extractor
+# Remove classification head (final layer)
 encoder = nn.Sequential(*list(model.children())[:-1])  # Removing the final FC layer
 encoder = encoder.to(device)
 encoder.eval()
@@ -91,9 +91,9 @@ def visualize_tsne(features, labels, title):
     plt.title(title)
     plt.show()
 
-# Visualize t-SNE results for Dataset 2 and Dataset 3 using ImageNet encoder features
-visualize_tsne(features_CNN_ds2, label_ds2, "ImageNet Encoder on Dataset 2")
-visualize_tsne(features_CNN_ds3, label_ds3, "ImageNet Encoder on Dataset 3")
+# Visualize t-SNE results for Dataset 2 and Dataset 3 using the PreTrained Model
+visualize_tsne(features_CNN_ds2, label_ds2, "PreTrained Model on Dataset 2")
+visualize_tsne(features_CNN_ds3, label_ds3, "PreTrained Model on Dataset 3")
 
 # Train-test split for classification
 def train_classify(features, labels, dataset_name):
