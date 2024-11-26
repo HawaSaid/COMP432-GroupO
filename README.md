@@ -17,7 +17,7 @@ Key objectives:
 - Explore feature transfer and extraction capabilities across different domains
 - Analyze model performance using t-SNE visualization
 - Apply classical machine learning techniques for feature classification
-- 
+
 # How to run the Python Code <br/>
 
 
