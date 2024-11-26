@@ -6,12 +6,23 @@
 <u> Haifaa Janoudi - 40263748</u>  <br/>
 <u> Sopheaktra Lean  - 40225014</u>  <br/>
 # Description of the Project <br/>
+This project focuses on applying Convolutional Neural Networks (CNNs) to image classification tasks across three diverse datasets:
 
+1. Colorectal Cancer Classification
+2. Prostate Cancer Classification
+3. Animal Faces Classification
+
+Key objectives:
+- Train a CNN model on the Colorectal Cancer dataset
+- Explore feature transfer and extraction capabilities across different domains
+- Analyze model performance using t-SNE visualization
+- Apply classical machine learning techniques for feature classification
+- 
 # How to run the Python Code <br/>
 
 
 # Run the pre-trained model on the provided sample test dataset <br/>
-# Obtain the Dataset <br/>
+# Obtain the Datasets <br/>
 <ol>
   <li>Dataset 1: Colorectal Cancer Classification [<a href="https://zenodo.org/records/1214456">Original Dataset</a> | <a href="https://onedrive.live.com/?authkey=%21ADmb8ZdEzwFMZoo&id=FB338EA7CF297329%21405133&cid=FB338EA7CF297329&parId=root&parQt=sharedby&o=OneUp">Project Dataset</a>]</li>
   <li>Dataset 2: Prostate Cancer Classification [<a href="https://zenodo.org/records/4789576">Original Dataset</a> | <a href="https://onedrive.live.com/?authkey=%21APy4wecXgMnQ7Kw&id=FB338EA7CF297329%21405132&cid=FB338EA7CF297329&parId=root&parQt=sharedby&o=OneUp">Project Dataset</a>]</li>
