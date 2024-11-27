@@ -36,6 +36,10 @@ Key objectives:<br/>
    `pip install numpy`<br/>
     For shutil: <br/>
    `pip install shutil`<br/>
+   For Matplotlib: <br/>
+   `pip install matplotlib`<br/>
+   For os: <br/>
+   `pip install os`<br/>
 
 # Obtain the Datasets <br/>
 <ol>
