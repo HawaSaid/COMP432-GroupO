@@ -25,20 +25,17 @@ Key objectives:<br/>
 # How to run the Python Code <br/>
 
 1. Install Pytorch
-   - For CPU only:
-     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu`
-   - For GPU using CUDA:
-     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
+   - For CPU only:<br/>
+     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu` <br/>
+   - For GPU using CUDA:<br/>
+     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118` <br/>
 2. Install all the required modules
    For scikit-learn:<br/>
    `pip install scikit-learn` <br/>
     For numpy:<br/>
-   
    `pip install numpy`<br/>
-
-     
-   `pip install shutil`
-   - 
+    For shutil: <br/>
+   `pip install shutil`<br/>
 
 # Obtain the Datasets <br/>
 <ol>
