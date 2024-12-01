@@ -8,6 +8,12 @@
 <u> Haifaa Janoudi - 40263748</u>  <br/>
 <u> Sopheaktra Lean  - 40225014</u>  <br/>
 
+# Links
+
+- GitHub Repository: https://github.com/HawaSaid/COMP432-GroupO/blob/main/README.md
+- Presentation: 
+- Distribution: https://docs.google.com/document/d/1nrpxcNu9BKhXDWJIeF3u13V0qrwCUe2aDYtKEMaZlPA/edit?usp=sharing
+
 # Description of the Project <br/>
 <b>This project focuses on applying Convolutional Neural Networks (CNNs) to image classification tasks across three diverse datasets:</b>
 
