@@ -12,7 +12,7 @@
 <b>This project focuses on applying Convolutional Neural Networks (CNNs) to image classification tasks across three diverse datasets:</b>
 
 1. Colorectal Cancer Classification: Medical imaging dataset to classify cancerous and non-cancerous samples.
-2. Prostate Cancer Classification: Another medical imaging dataset, testing 
+2. Prostate Cancer Classification: Another medical imaging dataset, testing the generalizability of models trained on a similar medical domain.
 3. Animal Faces Classification: A non-medical dataset, used to evaluate the domain adaptability of pre-trained and custom-trained CNN models.
 
 <b>Key objectives:</b><br/>
