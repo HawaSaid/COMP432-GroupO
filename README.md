@@ -66,9 +66,9 @@ src/
   - Dataset 2
   - Dataset 3
   - README.md
+  - task1.py
   - task2-ImageNet.py
   - task2-PreTrainedModel.py
-  - test.py
 
 # Obtain the Datasets <br/>
 <ol>
