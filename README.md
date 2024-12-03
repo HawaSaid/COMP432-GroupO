@@ -10,7 +10,7 @@
 
 # Links
 
-- GitHub Repository: https://github.com/HawaSaid/COMP432-GroupO/blob/main/README.md
+- GitHub Repository: https://github.com/HawaSaid/COMP432-GroupO.git
 - Presentation: 
 - Distribution: https://docs.google.com/document/d/1nrpxcNu9BKhXDWJIeF3u13V0qrwCUe2aDYtKEMaZlPA/edit?usp=sharing
 
