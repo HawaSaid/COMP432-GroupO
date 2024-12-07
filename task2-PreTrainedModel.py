@@ -4,7 +4,7 @@ from torchvision import datasets, transforms, models
 from sklearn.manifold import TSNE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, accuracy_score
+from sklearn.metrics import classification_report, accuracy_value
 import matplotlib.pyplot as plot
 import numpy as np
 
@@ -100,10 +100,10 @@ def train_classify(features, labels, dataset_name):
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.3, random_state=42)
     classifier = RandomForestClassifier(random_state=42)
     classifier.fit(X_train, y_train)
-    y_pred = classifier.predict(X_test)
+    y_prediction = classifier.predict(X_test)
     print(f"\nClassification Report for {dataset_name}:")
-    print(classification_report(y_test, y_pred))
-    print(f"Accuracy for {dataset_name}: {accuracy_score(y_test, y_pred):.4f}")
+    print(classification_report(y_test, y_prediction))
+    print(f"Accuracy for {dataset_name}: {accuracy_value(y_test, y_prediction):.4f}")
 
 # Apply classification on features extracted from Dataset 2 and Dataset 3
 
