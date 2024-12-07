@@ -96,7 +96,7 @@ visualize_tsne(features_CNN_dataset2, label_ds2, "PreTrained Model on Dataset 2"
 visualize_tsne(features_CNN_ds3, label_ds3, "PreTrained Model on Dataset 3")
 
 # Train-test split for classification
-def train_classify(features, labels, dataset_name):
+def train_classifying(features, labels, dataset_name):
     X_train, X_test, y_train, y_test = train_test_split(features, labels, test_size=0.3, random_state=42)
     classifier = RandomForestClassifier(random_state=42)
     classifier.fit(X_train, y_train)
@@ -107,5 +107,5 @@ def train_classify(features, labels, dataset_name):
 
 # Apply classification on features extracted from Dataset 2 and Dataset 3
 
-train_classify(features_CNN_dataset2, label_ds2, "Dataset 2")
-train_classify(features_CNN_ds3, label_ds3, "Dataset 3")
+train_classifying(features_CNN_dataset2, label_ds2, "Dataset 2")
+train_classifying(features_CNN_ds3, label_ds3, "Dataset 3")
