@@ -28,26 +28,26 @@ imagenet_encoder = torch.nn.Sequential(*list(imagenet_encoder.children())[:-1])
 imagenet_encoder.to(device)
 
 # hyperparameters
-img_size = (224, 224)
+img_size = (224, 224) #image resizing
 batch_size = 128     ## try different batch size ##
 
-# image transformations
+# image transformations to tensors 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
-    transforms.ToTensor(),
+    transforms.ToTensor(), 
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
 # Custom Dataset class
 class CustomImageDataset(Dataset):
-    def __init__(self, root_dir, transform=None):
-        self.root_dir = root_dir
+    def __init__(self, root_directory, transform=None):
+        self.root_directory = root_directory
         self.transform = transform
-        self.image_paths = []
-        self.labels = []
+        self.image_paths = [] #to store image paths in lists
+        self.labels = [] #Storing image lables in lists 
 
-        for class_label, class_name in enumerate(os.listdir(root_dir)):
-            class_dir = os.path.join(root_dir, class_name)
+        for class_label, class_name in enumerate(os.listdir(root_directory)):
+            class_dir = os.path.join(root_directory, class_name)
             if os.path.isdir(class_dir):
                 for img_name in os.listdir(class_dir):
                     img_path = os.path.join(class_dir, img_name)
@@ -69,9 +69,9 @@ class CustomImageDataset(Dataset):
         return image, label
     
 
-# datasets paths
-dataset2_path = 'Dataset 2/Prostate Cancer'
-dataset3_path = 'Dataset 3/Animal Faces'
+# datasets paths, task two only focuses on the 2nd and 3rd datasets to test the initial model we had with dataset 1
+dataset2_path = 'Dataset 2/Prostate Cancer' 
+dataset3_path = 'Dataset 3/Animal Faces' 
 
 # dataloaders
 dataloader2 = DataLoader(CustomImageDataset(dataset2_path, transform=transform), batch_size=batch_size, shuffle=False)
@@ -109,16 +109,7 @@ visualize_tsne(features_imagenet_ds3, labels_ds3, "ImageNet Encoder on Dataset 3
 
 ## could also perform random forest, or logistic regression rather than SVM ##
 
-# # perform classification on extracted features (SVM)
-# clf = SVC()
-# clf.fit(features_imagenet_ds2, labels_ds2)  # train on extracted features from Dataset 2
-# accuracy2 = clf.score(features_imagenet_ds2, labels_ds2)
-# print(f"Classification accuracy on Dataset 2: {accuracy2}")
 
-# # perform classification on extracted features (SVM)
-# clf.fit(features_imagenet_ds3, labels_ds3)  # train on extracted features from Dataset 3
-# accuracy3 = clf.score(features_imagenet_ds3, labels_ds3)
-# print(f"Classification accuracy on Dataset 3: {accuracy3}")
 
 # perform classification on Dataset 2 with Random Forest
 clf_rf_ds2 = RandomForestClassifier(n_estimators=100, random_state=42)
