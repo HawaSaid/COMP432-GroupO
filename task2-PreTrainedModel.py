@@ -5,7 +5,7 @@ from sklearn.manifold import TSNE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plot
 import numpy as np
 
 # Device setup
@@ -37,7 +37,7 @@ dataset3 = datasets.ImageFolder(dataset3_path, transform=transform)
 dataloader2 = torch.utils.data.DataLoader(dataset2, batch_size=32, shuffle=False)
 dataloader3 = torch.utils.data.DataLoader(dataset3, batch_size=32, shuffle=False)
 
-# Load pretrained model from task1
+# Load the pretrained model from task1
 class CustomResNet(nn.Module):
     def __init__(self, num_classes):
         super(CustomResNet, self).__init__()
@@ -57,7 +57,7 @@ class CustomResNet(nn.Module):
     def forward(self, x):
         return self.base_model(x)
 
-# Initialize and load model weights
+# Initialize the model wights and load them 
 model = CustomResNet(num_classes=3).to(device)
 model.load_state_dict(torch.load('my_model_task1_lr0.001_fulldataset.pth', map_location=device, weights_only=True))
 
@@ -78,21 +78,21 @@ def extract_features(dataloader, encoder, device):
     return np.concatenate(features), np.concatenate(labels)
 
 # Extract features from Dataset 2 and Dataset 3
-features_CNN_ds2, label_ds2 = extract_features(dataloader2, encoder, device)
+features_CNN_dataset2, label_ds2 = extract_features(dataloader2, encoder, device)
 features_CNN_ds3, label_ds3 = extract_features(dataloader3, encoder, device)
 
 # t-SNE visualization
 def visualize_tsne(features, labels, title):
     tsne = TSNE(n_components=2, random_state=42)
     tsne_results = tsne.fit_transform(features)
-    plt.figure(figsize=(10, 6))
-    plt.scatter(tsne_results[:, 0], tsne_results[:, 1], c=labels, cmap='viridis', alpha=0.7)
-    plt.colorbar()
-    plt.title(title)
-    plt.show()
+    plot.figure(figsize=(10, 6))
+    plot.scatter(tsne_results[:, 0], tsne_results[:, 1], c=labels, cmap='viridis', alpha=0.7)
+    plot.colorbar()
+    plot.title(title)
+    plot.show()
 
 # Visualize t-SNE results for Dataset 2 and Dataset 3 using the PreTrained Model
-visualize_tsne(features_CNN_ds2, label_ds2, "PreTrained Model on Dataset 2")
+visualize_tsne(features_CNN_dataset2, label_ds2, "PreTrained Model on Dataset 2")
 visualize_tsne(features_CNN_ds3, label_ds3, "PreTrained Model on Dataset 3")
 
 # Train-test split for classification
@@ -106,5 +106,6 @@ def train_classify(features, labels, dataset_name):
     print(f"Accuracy for {dataset_name}: {accuracy_score(y_test, y_pred):.4f}")
 
 # Apply classification on features extracted from Dataset 2 and Dataset 3
-train_classify(features_CNN_ds2, label_ds2, "Dataset 2")
+
+train_classify(features_CNN_dataset2, label_ds2, "Dataset 2")
 train_classify(features_CNN_ds3, label_ds3, "Dataset 3")
