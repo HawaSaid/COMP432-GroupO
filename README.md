@@ -43,22 +43,18 @@
 
 # How to run the Python Code <br/>
 
-1. Install Pytorch
-   - For CPU only:<br/>
-     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu` <br/>
-   - For GPU using CUDA:<br/>
-     `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118` <br/>
-2. Install all the required modules
-   For scikit-learn:<br/>
-   `pip install scikit-learn` <br/>
-    For numpy:<br/>
-   `pip install numpy`<br/>
-    For shutil: <br/>
-   `pip install shutil`<br/>
-   For Matplotlib: <br/>
-   `pip install matplotlib`<br/>
-   For os: <br/>
-   `pip install os`<br/>
+To run the Python code, 
+1. Install PyTorch. For CPU-only, use:
+`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu`,
+for GPU with CUDA, use:
+`pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`. 
+2. Install the required Python modules:
+   -  for scikit-learn `pip install scikit-learn`
+   -  for NumPy `pip install numpy`
+   -  for Matplotlib`pip install matplotlib`
+** Note that `os` and `shutil` are built-in modules, so no additional installation is needed.
+3. Ensure your datasets are placed in the specified directories (`Dataset 2/Prostate Cancer` and `Dataset 3/Animal Faces`).
+4. Execute the script using a terminal or IDE with the command `python your_script_name.py`.
 
 # Source Code Package in PyTorch
 src/
@@ -70,7 +66,7 @@ src/
   - task2-ImageNet.py
   - task2-PreTrainedModel.py
 
-# Obtain the Datasets <br/>
+# The datasets are obtained using the sources below<br/>
 <ol>
   <li>Dataset 1: Colorectal Cancer Classification [<a href="https://zenodo.org/records/1214456">Original Dataset</a> | <a href="https://onedrive.live.com/?authkey=%21ADmb8ZdEzwFMZoo&id=FB338EA7CF297329%21405133&cid=FB338EA7CF297329&parId=root&parQt=sharedby&o=OneUp">Project Dataset</a>]</li>
   <li>Dataset 2: Prostate Cancer Classification [<a href="https://zenodo.org/records/4789576">Original Dataset</a> | <a href="https://onedrive.live.com/?authkey=%21APy4wecXgMnQ7Kw&id=FB338EA7CF297329%21405132&cid=FB338EA7CF297329&parId=root&parQt=sharedby&o=OneUp">Project Dataset</a>]</li>
