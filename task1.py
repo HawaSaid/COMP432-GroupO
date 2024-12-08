@@ -23,9 +23,14 @@ else:
 
 # naming datasets/paths - original dataset used for submission-wise work, limited_dataset, can put 50 files if i want, used to run code
 # to check if it will run to completion.
+
+# -- Original Dataset Path (comment the next 2 lines out to use the sample dataset) -- #
 original_dataset = 'Dataset 1/Colorectal Cancer'
 limited_dataset = 'path/'  # temp directory for the limited dataset
 
+# -- Sample Dataset Path (uncomment the next 2 lines to use the sample dataset) -- #
+# original_dataset = 'Sample Dataset 1/Colorectal Cancer'
+# limited_dataset = 'path/'  # temp directory for the limited dataset
 
 # Limited dataset created here, max_files_per_class = x, where x amount of files will be used per class
 # Function to create a limited dataset
