@@ -45,39 +45,30 @@
 
 To run the Python code, 
 1. Install PyTorch:
-   -  For CPU-only, use:
-    ```bash
-    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-    ```
-   -  for GPU with CUDA, use:
-    ```bash
-    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-    ```
+   - For CPU-only, use:
+     ```bash
+     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+     ```
+   - For GPU with CUDA, use:
+     ```bash
+     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+     ```
 2. Install the required Python modules:
-   -  for scikit-learn:
-    ```bash
-    pip install scikit-learn
-      ```
-   -  for NumPy:
-    ```bash
-    pip install numpy
-    ```
-   -  for Matplotlib:
-    ```bash
-    pip install matplotlib
-    ```
-   ** Note that `os` and `shutil` are built-in modules, so no additional installation is needed.
+   ```bash
+   pip install scikit-learn, numpy, matplotlib, pillow
+   ```
+   - ** Note that `os` and `shutil` are built-in modules, so no additional installation is needed.
 3. Dataset Placement:
-   -  Download the 3 datasets with the links provided at the end. Ensure your datasets are placed in the specified directories
+   - Download the 3 datasets with the links provided at the end. Ensure your datasets are placed in the specified directories
     ```bash
     Dataset 1/Colorectal Cancer
     Dataset 2/Prostate Cancer
     Dataset 3/Animal Faces
     ```
-   -  If you wish to use the sample datasets provided, follow these steps:
-      -  Uncomment the line specifying the path to the sample dataset in the code.
-      -  Comment out the line specifying the path to the original dataset in the code.
-      -  For example:
+   - If you wish to use the sample datasets provided, follow these steps:
+      - Uncomment the line specifying the path to the sample dataset in the code.
+      - Comment out the line specifying the path to the original dataset in the code.
+      - For example:
       ```bash
       # -- Original Datasets Paths (comment these out to use the sample datasets) -- #
       # dataset2_path = './Dataset 2/Prostate Cancer'
@@ -88,18 +79,18 @@ To run the Python code,
       dataset3_path = './Sample Dataset 3/Animal Faces'
       ```
 4. Execute the scripts using a terminal or IDE with the following command:
-   -  Task 1: Train and Validate our Model:
-      ```bash
-      python task1.py
-      ```
-   -  Task 2 using Encoder from Task 1:
-      ```bash
-      python task2-PreTrainedModel.py
-      ```
-   -  Task 2 using ImageNet Pre-trained Encoder:
-      ```bash
-      python task2-ImageNet.py
-      ```
+   - Task 1: Train and Validate our Model:
+     ```bash
+     python task1.py
+     ```
+   - Task 2 using Encoder from Task 1:
+     ```bash
+     python task2-PreTrainedModel.py
+     ```
+   - Task 2 using ImageNet Pre-trained Encoder:
+     ```bash
+     python task2-ImageNet.py
+     ```
       
 # Source Code Package in PyTorch
 src/
