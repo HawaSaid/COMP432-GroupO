@@ -29,8 +29,8 @@ dataset2_path = 'Dataset 2/Prostate Cancer'
 dataset3_path = 'Dataset 3/Animal Faces' 
 
 # -- Sample Datasets Paths (uncomment the next 2 lines to use the sample datasets) -- #
-# dataset2_path = 'Sample Dataset 2/Prostate Cancer' 
-# dataset3_path = 'Sample Dataset 3/Animal Faces'
+# dataset2_path = 'Samples/Sample Dataset 2/Prostate Cancer' 
+# dataset3_path = 'Samples/Sample Dataset 3/Animal Faces' 
 
 # load pre-trained ImageNet encoder model
 imagenet_encoder = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)     
