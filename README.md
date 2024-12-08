@@ -79,7 +79,7 @@ To run the Python code,
       dataset3_path = './Sample Dataset 3/Animal Faces'
       ```
 4. Execute the scripts using a terminal or IDE with the following command:
-   - Task 1: Train and Validate our Model:
+   - Task 1: Train and Validate our Model
      ```bash
      python task1.py
      ```
@@ -98,9 +98,9 @@ src/
   - Sample Dataset 2
   - Sample Dataset 3
   - README.md
-  - task1.py
-  - task2-ImageNet.py
-  - task2-PreTrainedModel.py
+  - task1.py                     # Task 1
+  - task2-ImageNet.py            # Task 2 using ImageNet Pre-trained Encoder
+  - task2-PreTrainedModel.py     # Task 2 using Encoder from Task 1
 
 # The datasets are obtained using the sources below<br/>
 <ol>
