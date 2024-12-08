@@ -4,7 +4,7 @@ from torchvision import datasets, transforms, models
 from sklearn.manifold import TSNE
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, accuracy_value
+from sklearn.metrics import classification_report, accuracy_score
 import matplotlib.pyplot as plot
 import numpy as np
 
@@ -29,12 +29,12 @@ transform = transforms.Compose([
 # Get the path of dataset2 and dataset3
 
 # -- Original Datasets Paths (comment these out to use the sample datasets) -- #
-dataset2_path = './Dataset 2/Prostate Cancer'
-dataset3_path = './Dataset 3/Animal Faces'
+# dataset2_path = './Dataset 2/Prostate Cancer'
+# dataset3_path = './Dataset 3/Animal Faces'
 
 # -- Sample Dataset Path (uncomment this to use the sample dataset) -- #
-# dataset2_path = './Samples/Sample Dataset 2/Prostate Cancer' 
-# dataset3_path = './Samples/Sample Dataset 3/Animal Faces' 
+dataset2_path = './Samples/Sample Dataset 2/Prostate Cancer' 
+dataset3_path = './Samples/Sample Dataset 3/Animal Faces' 
 
 # Load datasets and dataloaders
 dataset2 = datasets.ImageFolder(dataset2_path, transform=transform)
@@ -109,7 +109,7 @@ def train_classifying(features, labels, dataset_name):
     y_prediction = classifier.predict(X_test)
     print(f"\nClassification Report for {dataset_name}:")
     print(classification_report(y_test, y_prediction))
-    print(f"Accuracy for {dataset_name}: {accuracy_value(y_test, y_prediction):.4f}")
+    print(f"Accuracy for {dataset_name}: {accuracy_score(y_test, y_prediction):.4f}")
 
 # Apply classification on features extracted from Dataset 2 and Dataset 3
 
