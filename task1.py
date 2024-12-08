@@ -29,7 +29,7 @@ original_dataset = 'Dataset 1/Colorectal Cancer'
 limited_dataset = 'path/'  # temp directory for the limited dataset
 
 # -- Sample Dataset Path (uncomment the next 2 lines to use the sample dataset) -- #
-# original_dataset = 'Sample Dataset 1/Colorectal Cancer'
+# original_dataset = 'Samples/Sample Dataset 1/Colorectal Cancer'
 # limited_dataset = 'path/'  # temp directory for the limited dataset
 
 # Limited dataset created here, max_files_per_class = x, where x amount of files will be used per class
