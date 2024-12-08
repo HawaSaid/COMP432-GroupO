@@ -55,7 +55,7 @@ To run the Python code,
      ```
 2. Install the required Python modules:
    ```bash
-   pip install scikit-learn, numpy, matplotlib, pillow
+   pip install scikit-learn numpy matplotlib pillow
    ```
    - ** Note that `os` and `shutil` are built-in modules, so no additional installation is needed.
 3. Dataset Placement:
