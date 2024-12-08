@@ -22,13 +22,13 @@ else:
     print("\nUsing CPU.\n")
 
 # load pre-trained ImageNet encoder model
-imagenet_encoder = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)     ## try ResNet-34 and ResNet-101, or a completely different encoder ##
+imagenet_encoder = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)     
 imagenet_encoder = torch.nn.Sequential(*list(imagenet_encoder.children())[:-1])
 imagenet_encoder.to(device)
 
 # hyperparameters
 img_size = (224, 224) #image resizing
-batch_size = 128     ## try different batch size ##
+batch_size = 128    
 
 # image transformations to tensors 
 transform = transforms.Compose([
