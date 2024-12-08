@@ -94,9 +94,7 @@ To run the Python code,
       
 # Source Code Package in PyTorch
 src/
-  - Sample Dataset 1
-  - Sample Dataset 2
-  - Sample Dataset 3
+  - Sample Datasets              # Folder contains sample Datasets 1, 2, and 3 (100 images each)
   - README.md
   - task1.py                     # Task 1
   - task2-ImageNet.py            # Task 2 using ImageNet Pre-trained Encoder
