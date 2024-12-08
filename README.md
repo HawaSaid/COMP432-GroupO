@@ -94,9 +94,9 @@ To run the Python code,
       
 # Source Code Package in PyTorch
 src/
-  - Dataset 1
-  - Dataset 2
-  - Dataset 3
+  - Sample Dataset 1
+  - Sample Dataset 2
+  - Sample Dataset 3
   - README.md
   - task1.py
   - task2-ImageNet.py
