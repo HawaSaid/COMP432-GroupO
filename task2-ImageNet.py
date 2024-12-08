@@ -21,6 +21,17 @@ else:
     device = torch.device("cpu")  # Fall back to CPU
     print("\nUsing CPU.\n")
 
+
+# datasets paths, task two only focuses on the 2nd and 3rd datasets to test the initial model we had with dataset 1
+
+# -- Original Datasets Paths (comment the next 2 lines out to use the sample datasets) -- #
+dataset2_path = 'Dataset 2/Prostate Cancer' 
+dataset3_path = 'Dataset 3/Animal Faces' 
+
+# -- Sample Datasets Paths (uncomment the next 2 lines to use the sample datasets) -- #
+# dataset2_path = 'Sample Dataset 2/Prostate Cancer' 
+# dataset3_path = 'Sample Dataset 3/Animal Faces'
+
 # load pre-trained ImageNet encoder model
 imagenet_encoder = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)     
 imagenet_encoder = torch.nn.Sequential(*list(imagenet_encoder.children())[:-1])
@@ -67,10 +78,6 @@ class CustomImageDataset(Dataset):
 
         return image, label
     
-
-# datasets paths, task two only focuses on the 2nd and 3rd datasets to test the initial model we had with dataset 1
-dataset2_path = 'Dataset 2/Prostate Cancer' 
-dataset3_path = 'Dataset 3/Animal Faces' 
 
 # dataloaders
 dataloader2 = DataLoader(CustomImageDataset(dataset2_path, transform=transform), batch_size=batch_size, shuffle=False)
