@@ -33,8 +33,8 @@ dataset2_path = './Dataset 2/Prostate Cancer'
 dataset3_path = './Dataset 3/Animal Faces'
 
 # -- Sample Dataset Path (uncomment this to use the sample dataset) -- #
-# dataset2_path = './Sample Dataset 2/Prostate Cancer' 
-# dataset3_path = './Sample Dataset 3/Animal Faces' 
+# dataset2_path = './Samples/Sample Dataset 2/Prostate Cancer' 
+# dataset3_path = './Samples/Sample Dataset 3/Animal Faces' 
 
 # Load datasets and dataloaders
 dataset2 = datasets.ImageFolder(dataset2_path, transform=transform)
