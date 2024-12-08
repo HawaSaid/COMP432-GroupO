@@ -93,12 +93,18 @@ To run the Python code,
      ```
       
 # Source Code Package in PyTorch
-src/
-  - Sample Datasets              # Folder contains sample Datasets 1, 2, and 3 (100 images each)
-  - README.md
-  - task1.py                     # Task 1
-  - task2-ImageNet.py            # Task 2 using ImageNet Pre-trained Encoder
-  - task2-PreTrainedModel.py     # Task 2 using Encoder from Task 1
+```md
+COMP432-GroupO/
+│
+├── Sample Datasets/          # Folder containing sample Datasets 1, 2, and 3 (100 images each)
+│   ├── Sample Dataset 1/             # Samples for Dataset 1 (100 images)
+│   ├── Sample Dataset 2/             # Samples for Dataset 2 (100 images)
+│   └── Sample Dataset 3/             # Samples for Dataset 3 (100 images)
+├── README.md                 # Readme file for the project
+├── task1.py                  # Task 1 script
+├── task2-ImageNet.py         # Task 2 using ImageNet Pre-trained Encoder
+└── task2-PreTrainedModel.py  # Task 2 using Encoder from Task 1
+```
 
 # The datasets are obtained using the sources below<br/>
 <ol>
