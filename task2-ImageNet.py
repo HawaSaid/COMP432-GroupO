@@ -107,10 +107,6 @@ def visualize_tsne(features, labels, title):
 visualize_tsne(features_imagenet_ds2, labels_ds2, "ImageNet Encoder on Dataset 2")
 visualize_tsne(features_imagenet_ds3, labels_ds3, "ImageNet Encoder on Dataset 3")
 
-## could also perform random forest, or logistic regression rather than SVM ##
-
-
-
 # perform classification on Dataset 2 with Random Forest
 clf_rf_ds2 = RandomForestClassifier(n_estimators=100, random_state=42)
 clf_rf_ds2.fit(features_imagenet_ds2, labels_ds2)
@@ -121,7 +117,7 @@ print(classification_report(labels_ds2, predictions_rf_ds2))
 accuracy_rf_ds2 = clf_rf_ds2.score(features_imagenet_ds2, labels_ds2) * 100
 print(f"Random Forest classification accuracy on Dataset 2: {accuracy_rf_ds2:.2f}")
 
-# perform classification on Dataset 2 with Random Forest
+# perform classification on Dataset 3 with Random Forest
 clf_rf_ds3 = RandomForestClassifier(n_estimators=100, random_state=42)
 clf_rf_ds3.fit(features_imagenet_ds3, labels_ds3)
 
