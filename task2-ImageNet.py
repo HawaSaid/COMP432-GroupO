@@ -3,7 +3,6 @@ import torch
 import torchvision.models as models
 import torchvision.transforms as transforms
 from sklearn.manifold import TSNE
-# from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
