@@ -75,8 +75,8 @@ To run the Python code,
       # dataset3_path = './Dataset 3/Animal Faces'
 
       # -- Sample Dataset Path (uncomment this to use the sample dataset) -- #
-      dataset2_path = './Sample Dataset 2/Prostate Cancer' 
-      dataset3_path = './Sample Dataset 3/Animal Faces'
+      dataset2_path = './Samples Datasets/Sample Dataset 2/Prostate Cancer' 
+      dataset3_path = './Samples Datasets/Sample Dataset 3/Animal Faces'
       ```
 4. Execute the scripts using a terminal or IDE with the following command:
    - Task 1: Train and Validate our Model
