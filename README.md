@@ -11,7 +11,7 @@
 # Links
 
 - GitHub Repository: https://github.com/HawaSaid/COMP432-GroupO.git
-- Presentation: 
+- Presentation: https://liveconcordia-my.sharepoint.com/:v:/g/personal/h_janoud_live_concordia_ca/EURjtV3aNLNApqba83qJh80BA_bLL8I1EGHRcuJ7zt8ZKg?e=YKt2CU 
 - Distribution: https://docs.google.com/document/d/1nrpxcNu9BKhXDWJIeF3u13V0qrwCUe2aDYtKEMaZlPA/edit?usp=sharing
 
 # Description of the Project <br/>
